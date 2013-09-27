@@ -125,7 +125,7 @@ class BenchImpl(object):
 
             env={'SRCDIR':srcdir,
                  'BUILDDIR':builddir + '_' + platform,
-                 'BIN':path.join(builddir+'_'+platform,benchmark.name),
+                 'BIN':path.join(builddir+'_'+platform,benchmark.name)+'.x',
                  'PARBOIL_ROOT':globals.root,
                  'PLATFORM':platform,
                  'BUILD':self.name}
