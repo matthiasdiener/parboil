@@ -2,7 +2,7 @@
 
 # Default language wide options
 
-LANG_CFLAGS=-I$(PARBOIL_ROOT)/common/include -O2
+LANG_CFLAGS=-I$(PARBOIL_ROOT)/common/include -O2 -w
 LANG_CXXFLAGS=$(LANG_CFLAGS)
 LANG_LDFLAGS=
 
