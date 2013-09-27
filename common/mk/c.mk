@@ -2,7 +2,7 @@
 
 # Default language wide options
 
-LANG_CFLAGS=-I$(PARBOIL_ROOT)/common/include -I/usr/local/cuda/include
+LANG_CFLAGS=-I$(PARBOIL_ROOT)/common/include -O2
 LANG_CXXFLAGS=$(LANG_CFLAGS)
 LANG_LDFLAGS=
 
