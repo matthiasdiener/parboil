@@ -154,9 +154,9 @@ void MAIN_initialize( const MAIN_Param* param ) {
 void MAIN_finalize( const MAIN_Param* param ) {
 	LBM_showGridStatistics( *srcGrid );
 
-	if( param->action == COMPARE )
+	if( param->action == COMPARE && param->resultFilename)
 		LBM_compareVelocityField( *srcGrid, param->resultFilename, TRUE );
-	if( param->action == STORE )
+	if( param->action == STORE && param->resultFilename)
 	LBM_storeVelocityField( *srcGrid, param->resultFilename, TRUE );
 
 	LBM_freeGrid( (float**) &srcGrid );
