@@ -2,5 +2,5 @@
 LANGUAGE=c
 SRCDIR_OBJS=main.o readatom.o output.o excl.o cutcpu.o
 APP_CFLAGS=-fopenmp
-APP_LDFLAGS=-lm -lgomp
+APP_LDFLAGS=-lm -fopenmp
 

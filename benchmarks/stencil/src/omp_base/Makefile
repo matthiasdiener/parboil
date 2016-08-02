@@ -3,4 +3,4 @@
 LANGUAGE=c
 SRCDIR_OBJS=main.o kernels.o file.o
 APP_CFLAGS=-fopenmp
-APP_LDFLAGS=-lgomp
+APP_LDFLAGS=-fopenmp

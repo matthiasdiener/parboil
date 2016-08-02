@@ -4,6 +4,6 @@ LANGUAGE=c
 TOOLS_SRC=common_src/convert-dataset
 SRCDIR_OBJS=main.o file.o 
 APP_CFLAGS=-I$(TOOLS_SRC) -fopenmp
-APP_LDFLAGS=-lgomp
+APP_LDFLAGS=-fopenmp
 
 include $(TOOLS_SRC)/commontools.mk

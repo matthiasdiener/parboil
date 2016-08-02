@@ -14,7 +14,7 @@ endif
 APP_CFLAGS += -fopenmp
 APP_CXXFLAGS += -fopenmp
 
-APP_LDFLAGS = -lm -lstdc++ -lgomp
+APP_LDFLAGS = -lm -lstdc++ -fopenmp
 
 # To use the MKL library
 ifeq ($(mkl), 1)

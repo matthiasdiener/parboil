@@ -3,4 +3,4 @@
 LANGUAGE=c
 SRCDIR_OBJS=args.o model_compute_cpu.o model_io.o main.o
 APP_CFLAGS=-fopenmp
-APP_LDFLAGS=-lm -lgomp
+APP_LDFLAGS=-lm -fopenmp
