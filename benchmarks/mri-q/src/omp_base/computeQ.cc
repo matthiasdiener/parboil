@@ -43,7 +43,7 @@ ComputeQCPU(int numK, int numX,
   float sinArg;
 
   int indexK, indexX;
-  #pragma omp paralel for
+  #pragma omp parallel for
   for (indexK = 0; indexK < numK; indexK++) {
     for (indexX = 0; indexX < numX; indexX++) {
       expArg = PIx2 * (kVals[indexK].Kx * x[indexX] +
