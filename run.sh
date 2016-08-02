@@ -5,8 +5,8 @@ set -o errexit -o nounset -o posix -o pipefail
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $DIR
 
-# 11 in total
-bm="bfs cutcp histo lbm mri-gridding mri-q sad sgemm spmv stencil tpacf"
+# 10 in total
+bm="bfs cutcp histo lbm mri-gridding mri-q sgemm spmv stencil tpacf"
 
 mkdir -p run
 
