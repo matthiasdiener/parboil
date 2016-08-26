@@ -11,7 +11,7 @@ bm="bfs cutcp histo lbm mri-gridding mri-q sgemm spmv stencil tpacf"
 OUTDIR=~/Dropbox/results/$(hostname)/$(basename $DIR)/
 mkdir -p $OUTDIR
 
-exe() { echo "++ $@" |& tee -a $OUTDIR/$b.txt ;  if [[ "$1" == "export" ]]; then echo X$1; $@ ; fi ;  $@ |& tee -a $OUTDIR/$b.txt ; }
+exe() { echo "++ $@" |& tee -a $OUTDIR/$b.txt ;  if [[ "$1" == "export" ]]; then $@ ; fi ;  $@ |& tee -a $OUTDIR/$b.txt ; }
 
 for b in $bm; do
 	echo -n > $OUTDIR/$b.txt #clean output file
