@@ -183,12 +183,13 @@ class BenchImpl(object):
                 platform = self.platform
 
             # Run the program
-            #exename = path.join('build', self.name+'_'+platform, benchmark.name)
+            exename = path.join('build', self.name+'_'+platform, benchmark.name)
             #args = [exename] + extra_opts + dataset.getCommandLineArguments(benchmark, do_output)
             #rc = process.spawnwaitv(exename, args)
 
             args = extra_opts + dataset.getCommandLineArguments(benchmark, do_output)
             args = reduce(lambda x, y: x + ' ' + y, args)
+            print "Running:", path.join(benchmark.path, exename+".x"), args
 
             ###
             try:
