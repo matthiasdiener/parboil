@@ -18,7 +18,7 @@ for b in $bm; do
 	exe echo "running $b"
 	exe date
 	exe uname -a
-	[[ -x /usr/bin/hwloc-ls ]] && exe hwloc-ls
+	[[ -x /usr/bin/hwloc-ls ]] && exe hwloc-ls --of console
 	exe export GOMP_CPU_AFFINITY=0-1024 KMP_AFFINITY=explicit,verbose,proclist=[0-1024]
 	exe sudo -E perf stat -A -a -e instructions,cache-misses,cache-references,cycles ./parboil run --no-check $b omp_base large
 	echo
